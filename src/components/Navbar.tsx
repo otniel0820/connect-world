@@ -1,50 +1,27 @@
 'use client'
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import NavLinks from './NavLinks'; // Componente para la lista de enlaces
+import NavbarLinks from './NavbarLinks';
 import Image from 'next/image';
 
-const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const Navbar: React.FC = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <nav className=''>
-      
-      <div className=''>
-        <Link href="/">
-          
-            <Image src={''} width={40} height={40} alt='Logo del proyecto'/>
-          
-        </Link>
+    <nav className="w-full fixed z-10 backdrop-blur-[3px] bg-gray-800 py-2 flex flex-col justify-evenly items-start text-white md:flex-row md:items-center md:gap-0 md:justify-around">
+      <div className="drop-shadow-lg pl-6">
+        <Image src="https://i.ibb.co/18bDXmt/creane-un-logo-para-una-empresa-de-streamen-que-2-removebg-preview.png" width={160} height={50} alt="Logo Image"/>
       </div>
-
-      
-      <NavLinks isOpen={isMobileMenuOpen} />
-
-      
-      <div className=''>
-        <div className=''>
-          
-        </div>
-        <div className=''>
-          
-        </div>
-        <div className=''>
-          
-        </div>
+      <div className="hamburger cursor-pointer" onClick={toggleNavbar}>
+        <div className={`line1 ${isOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+        <div className={`line2 ${isOpen ? 'w-0' : ''}`}></div>
+        <div className={`line3 ${isOpen ? 'rotate-[-45deg] -translate-y-2' : ''}`}></div>
       </div>
-
-      
-      <div className='' onClick={toggleMobileMenu}>
-        <div className=''></div>
-        <div className=''></div>
-        <div className=''></div>
-      </div>
+      <NavbarLinks isOpen={isOpen} />
     </nav>
   );
 };
