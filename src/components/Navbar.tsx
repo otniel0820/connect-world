@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="w-full fixed z-10 backdrop-blur-[3px] bg-gray-800 py-2 flex flex-col justify-evenly items-start text-white md:flex-row md:items-center md:gap-0 md:justify-around">
+    <nav className="w-full fixed z-10  bg-transparent py-2 flex flex-col justify-evenly items-start text-white md:flex-row md:items-center md:gap-0 md:justify-around">
       <div className="drop-shadow-lg pl-6">
         <Image src="https://i.ibb.co/18bDXmt/creane-un-logo-para-una-empresa-de-streamen-que-2-removebg-preview.png" width={160} height={50} alt="Logo Image"/>
       </div>
