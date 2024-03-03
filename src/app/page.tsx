@@ -1,36 +1,30 @@
-'use client'
+"use client";
 
 import Navbar from "@/components/Navbar";
 import { HeroParallax } from "@/components/ui/HeroParallax";
 import { useMovies } from "@/hooks/useMovies";
 import { useTvSeries } from "@/hooks/useTvSeries";
+import Link from "next/link";
+
 
 
 export default function Home() {
-  const {movies}= useMovies()
-  const {series}= useTvSeries()
+  const { movies } = useMovies();
 
-  const movieParallax = [
-    
-    {
-      title: movies.title,
-      thumbnail: movies.poster_path,
-      link: ''
-    }
-    
-  
-]
+  const transformedMovies = movies?.map((movie) => ({
+    title: movie.title,
+    link: `/movie/${movie.id}`,
+    thumbnail: movie.poster_path, 
+  }));
 
-  
   console.log(movies);
-  
+
   return (
     <main className="relative">
-      <HeroParallax products={movieParallax}/>
+      <HeroParallax products={transformedMovies} />
       <div className="absolute top-0 w-full z-10">
-        <Navbar/>
+        <Navbar />
       </div>
-      
     </main>
   );
 }

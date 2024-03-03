@@ -109,9 +109,7 @@ export const Header = () => {
         Connect World <br /> Peliculas Series y Mas!
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      Descubre el mundo del entretenimiento con Connect World: películas, series, canales en vivo y deportes en un solo lugar. Disfruta en HD desde cualquier dispositivo. ¡Tu diversión está a solo un clic de distancia!
       </p>
     </div>
   );
@@ -144,7 +142,7 @@ export const ProductCard = ({
         className="block group-hover/product:shadow-2xl "
       >
         <Image
-          src={product.thumbnail}
+          src={`https://image.tmdb.org/t/p/w500${product.thumbnail}`}
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"

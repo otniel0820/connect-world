@@ -1,5 +1,6 @@
 'use client'
 
+import { Movies } from "@/interfaces/movies";
 import { getMovies } from "@/utils/movieData";
 import { useQuery } from "@tanstack/react-query";
 
@@ -18,7 +19,7 @@ export const useMovies = () => {
     return {
       isLoading,
       isError,
-      movies,
+      movies: movies as Movies[],
       isFetching,
     };
   };
