@@ -3,9 +3,6 @@
 import Navbar from "@/components/Navbar";
 import { HeroParallax } from "@/components/ui/HeroParallax";
 import { useMovies } from "@/hooks/useMovies";
-import { useTvSeries } from "@/hooks/useTvSeries";
-import Link from "next/link";
-
 
 
 export default function Home() {

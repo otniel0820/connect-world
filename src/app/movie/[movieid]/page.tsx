@@ -1,11 +1,21 @@
-import React from 'react'
+"use client";
 
-const page = () => {
+import CardMovieDetails from "@/components/CardMovieDetails";
+import { TitleSparkles } from "@/components/TitleSparkles";
+import { useMovie } from "@/hooks/useMovie";
+import React from "react";
+
+const Page = ({ params }: { params: { movieid: string } }) => {
+  const { movie } = useMovie({ id: params.movieid });
+
+  console.log(movie);
+
   return (
-    <div className='text-white'>
-      aqui van los detalles de las peliculas
+    <div>
+      <TitleSparkles />
+      <CardMovieDetails movie={movie} />
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default Page;
