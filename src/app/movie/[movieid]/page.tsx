@@ -1,7 +1,7 @@
 "use client";
 
 import CardMovieDetails from "@/components/CardMovieDetails";
-import { TitleSparkles } from "@/components/TitleSparkles";
+import  TitleSparkles  from "@/components/TitleSparkles";
 import { useMovie } from "@/hooks/useMovie";
 import React from "react";
 
@@ -12,7 +12,7 @@ const Page = ({ params }: { params: { movieid: string } }) => {
 
   return (
     <div>
-      <TitleSparkles />
+      <TitleSparkles movie={movie} />
       <CardMovieDetails movie={movie} />
     </div>
   );
