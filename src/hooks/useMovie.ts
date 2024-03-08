@@ -1,5 +1,5 @@
 import { Movie } from "@/interfaces/movie";
-import { getMovieById } from "@/utils/movieById";
+import { getMovieById } from "@/utils/getMovieById";
 import { useQuery } from "@tanstack/react-query";
 
 interface Options {

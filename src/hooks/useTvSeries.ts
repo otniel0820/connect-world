@@ -1,6 +1,6 @@
 'use client'
 
-import { getSeries } from "@/utils/tvSeriesData";
+import { getSeries } from "@/utils/getTvSeriesData";
 import { useQuery } from "@tanstack/react-query";
 
 

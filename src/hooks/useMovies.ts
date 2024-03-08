@@ -1,7 +1,7 @@
 'use client'
 
 import { Movies } from "@/interfaces/movies";
-import { getMovies } from "@/utils/movieData";
+import { getMovies } from "@/utils/getMovieData";
 import { useQuery } from "@tanstack/react-query";
 
 

@@ -8,8 +8,6 @@ import React from "react";
 const Page = ({ params }: { params: { movieid: string } }) => {
   const { movie } = useMovie({ id: params.movieid });
 
-  console.log(movie);
-
   return (
     <div>
       <TitleSparkles movie={movie} />

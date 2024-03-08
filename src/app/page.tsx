@@ -4,17 +4,14 @@ import Navbar from "@/components/Navbar";
 import { HeroParallax } from "@/components/ui/HeroParallax";
 import { useMovies } from "@/hooks/useMovies";
 
-
 export default function Home() {
   const { movies } = useMovies();
 
   const transformedMovies = movies?.map((movie) => ({
     title: movie.title,
     link: `/movie/${movie.id}`,
-    thumbnail: movie.poster_path, 
+    thumbnail: movie.poster_path,
   }));
-
-  console.log(movies);
 
   return (
     <main className="relative">
