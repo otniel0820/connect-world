@@ -22,6 +22,6 @@ export const useMovieTrailer = ({ id }: Options) => {
     isError,
     isFetching,
     isLoading,
-    trailer: trailer as MovieTrailer,
+    trailer: trailer as MovieTrailer[],
   };
 };
