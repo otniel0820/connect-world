@@ -7,8 +7,8 @@ import MovieDetails from "./MovieDetails";
 
 const CardMovieDetails: React.FC<{ movie: Movie }> = ({ movie }) => {
   return (
-    <div className="flex justify-around ">
-      <CardContainer className=" h-96 pb-10 ">
+    <div className="flex justify-around pb-16">
+      <CardContainer className=" h-96">
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border  flex flex-col gap-5 items-center">
         <CardItem translateZ="100" className="w-full mt-4 flex justify-center">
           <Image

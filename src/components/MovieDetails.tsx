@@ -9,7 +9,6 @@ const MovieDetails: React.FC<{ movie: Movie }> = ({ movie }) => {
   const { trailer, isFetching } = useMovieTrailer({ id: movieIdString });
 
   if (isFetching) {
-    // Muestra un indicador de carga o un mensaje
     return <p>Cargando información del tráiler...</p>;
   }
 
@@ -20,7 +19,7 @@ const MovieDetails: React.FC<{ movie: Movie }> = ({ movie }) => {
   );
 
   const officialTrailer =
-    officialTrailers.length > 0 ? officialTrailers[0] : null;
+  officialTrailers && officialTrailers.length > 0 ? officialTrailers[0] : null;
 
   if (!movie || !movie.genres) {
     return null;
@@ -44,12 +43,14 @@ const MovieDetails: React.FC<{ movie: Movie }> = ({ movie }) => {
         <p>{movie.vote_average} / 10</p>
       </section>
       <section className="flex justify-center pt-5">
-        <Link
-          href={`https://www.youtube.com/watch?v=${officialTrailer?.key}`}
-          target="_blank"
-        >
-          <Button variant={"primary"}>Trailer Oficial</Button>
-        </Link>
+      {officialTrailer && (
+          <Link
+            href={`https://www.youtube.com/watch?v=${officialTrailer.key}`}
+            target="_blank"
+          >
+            <Button variant={"primary"}>Trailer Oficial</Button>
+          </Link>
+        )}
       </section>
     </div>
   );

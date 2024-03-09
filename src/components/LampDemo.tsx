@@ -17,16 +17,17 @@ export function LampDemo() {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="pt-20 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
+        className=" bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl mt-16"
       >
-        <div className="flex flex-col gap-4 items-center pt-20">
+        <div className="flex flex-col gap-4 items-center ">
           <Image
             src={
               'https://i.ibb.co/yV6ZLsz/dame-una-imagen-que-diga-free-trial-removebg-preview.png"'
             }
             alt="Free trial"
-            width={200}
+            width={300}
             height={200}
+            className="mt-10"
           />
           <h1>¿Deseas una Prueba Gratis?</h1>
         </div>
