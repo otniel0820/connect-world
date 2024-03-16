@@ -9,7 +9,7 @@ interface NavbarLinksProps {
 const NavbarLinks: React.FC<NavbarLinksProps> = ({ isOpen }) => {
   const links = [
     { id: 1, text: 'Inicio', href: '/' },
-    { id: 2, text: 'Planes', href: '/solutions' },
+    { id: 2, text: 'Series', href: '/series' },
     { id: 3, text: 'Prueba gratis', href: '/free-test' },
     { id: 4, text: 'Descargas', href: '/services' },
     { id: 5, text: 'Web Players', href: '/contact' },

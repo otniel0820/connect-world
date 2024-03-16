@@ -1,6 +1,6 @@
 import { HoverEffect } from "./ui/HoverEffect";
  
-export function CardHoverEffectDemo() {
+export function TvSeries() {
   return (
     <div className="max-w-5xl mx-auto px-8">
       <HoverEffect items={projects} />
