@@ -5,6 +5,7 @@ import { Media } from "./CardMovieDetails";
 
 const TitleSparkles: React.FC<{ media: Media }> = ({ media }) => {
 
+  // Se hace esta variable let para comprobar si es title o name ya que el tipo Media contiene dois tipados el cuales son Movie y TvSerie
   let title: string = "";
 
   if (media) {
