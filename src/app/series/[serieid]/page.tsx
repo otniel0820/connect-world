@@ -1,13 +1,22 @@
+'use client'
+
+import CardMovieDetails from "@/components/CardMovieDetails";
+import TitleSparkles from "@/components/TitleSparkles";
+import { useTvSerie } from "@/hooks/useTvSerie";
 
 
 
-const Page = ({ params }: { params: { movieid: string } }) => {
+const Page = ({ params }: { params: { serieid: string } }) => {
   
+  const { serie } = useTvSerie({ id: params.serieid });
+
+  console.log(params);
   
   
     return (
-      <div className="text-white">
-       aqui va la descripcion
+      <div >
+       <TitleSparkles media={serie}/>
+       <CardMovieDetails media={serie}/>
       </div>
     );
   };

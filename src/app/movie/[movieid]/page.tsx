@@ -10,8 +10,8 @@ const Page = ({ params }: { params: { movieid: string } }) => {
 
   return (
     <div>
-      <TitleSparkles movie={movie} />
-      <CardMovieDetails movie={movie} />
+      <TitleSparkles media={movie} />
+      <CardMovieDetails media={movie} />
     </div>
   );
 };

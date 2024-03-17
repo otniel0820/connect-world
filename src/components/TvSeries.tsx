@@ -7,7 +7,7 @@ export function TvSeries() {
     const {series} = useTvSeries()
     const transformedSeries = series?.map((serie) => ({
         title: serie.name,
-        link: `/series/serie${serie.id}`,
+        link: `/series/${serie.id}`,
         thumbnail: serie.poster_path,
       }));
     
