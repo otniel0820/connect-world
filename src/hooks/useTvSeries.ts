@@ -1,5 +1,6 @@
 'use client'
 
+import { TvSeries } from "@/interfaces/tvSeries";
 import { getSeries } from "@/utils/getTvSeriesData";
 import { useQuery } from "@tanstack/react-query";
 
@@ -18,7 +19,7 @@ export const useTvSeries = () => {
     return {
       isLoading,
       isError,
-      series,
+      series: series as TvSeries[],
       isFetching,
     };
   };

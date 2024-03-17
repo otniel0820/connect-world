@@ -11,8 +11,7 @@ const NavbarLinks: React.FC<NavbarLinksProps> = ({ isOpen }) => {
     { id: 1, text: 'Inicio', href: '/' },
     { id: 2, text: 'Series', href: '/series' },
     { id: 3, text: 'Prueba gratis', href: '/free-test' },
-    { id: 4, text: 'Descargas', href: '/services' },
-    { id: 5, text: 'Web Players', href: '/contact' },
+    { id: 4, text: 'Planes', href: '/plans' },
     { id: 6, text: 'Contactanos', href: '/contact' },
   ];
 

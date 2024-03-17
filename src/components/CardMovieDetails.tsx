@@ -5,6 +5,7 @@ import Image from "next/image";
 import MovieDetails from "./MovieDetails";
 
 
+
 const CardMovieDetails: React.FC<{ movie: Movie }> = ({ movie }) => {
   return (
     <div className="flex justify-around pb-16">

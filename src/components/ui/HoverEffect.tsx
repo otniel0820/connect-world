@@ -4,6 +4,7 @@ import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
+import Image from 'next/image';
  
 export const HoverEffect = ({
   items,
@@ -11,7 +12,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    description: string;
+    thumbnail: string;
     link: string;
   }[];
   className?: string;
@@ -21,7 +22,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  py-10",
+        "grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4  py-10",
         className
       )}
     >
@@ -52,7 +53,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
-            <CardDescription>{item.description}</CardDescription>
+            <Image src={`https://image.tmdb.org/t/p/w500${item.thumbnail}`} alt={item.title} width={400} height={400} />
           </Card>
         </Link>
       ))}
@@ -75,7 +76,7 @@ export const Card = ({
       )}
     >
       <div className="relative z-50">
-        <div className="p-4">{children}</div>
+        <div className="px-2 flex flex-col items-center gap-2">{children}</div>
       </div>
     </div>
   );
@@ -88,7 +89,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <h4 className={cn("text-zinc-100 font-bold tracking-wide mt-2 text-center", className)}>
       {children}
     </h4>
   );
